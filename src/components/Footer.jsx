@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaInstagram, FaEnvelope, FaWhatsapp } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -27,6 +27,10 @@ export default function Footer() {
 
           <a href="https://www.instagram.com/yadneshnaik_29/" target="_blank">
             <FaInstagram />
+          </a>
+
+          <a href="https://wa.me/+918421767210" target="_blank">
+            <FaWhatsapp />
           </a>
         </div>
 
