@@ -1,0 +1,133 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #0d0d0d;
+  color: white;
+  scroll-behavior: smooth;
+  font-family: 'Poppins', sans-serif;
+}
+
+section {
+  padding: 100px 0;
+}
+
+.navbar-custom {
+  background: rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(10px);
+}
+
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.glow-text {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px #00d9ff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+/* Background Floating Circles */
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.6;
+}
+
+.circle1 {
+  width: 350px;
+  height: 350px;
+  background: rgba(0, 200, 255, 0.5);
+  top: -80px;
+  left: -100px;
+}
+
+.circle2 {
+  width: 400px;
+  height: 400px;
+  background: rgba(255, 0, 120, 0.4);
+  bottom: -100px;
+  right: -120px;
+}
+
+/* RGBA Overlay for Dark Effect */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.45);
+  backdrop-filter: blur(4px);
+}
+
+/* Glow Text Effect */
+.glow-text {
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
+  z-index: 2;
+}
+
+.hero h3,
+.hero a {
+  z-index: 2;
+}
+
+form input,
+form textarea {
+  border: none;
+  outline: none;
+}
+
+form input:focus,
+form textarea:focus {
+  box-shadow: 0 0 10px #00eaff;
+}
+
+
+/* Transparent Footer */
+.footer-container {
+  background: rgba(0, 0, 0, 0.25);   /* transparent */
+  backdrop-filter: blur(8px);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 60px;
+  width: 100%;
+}
+
+.footer-title {
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: #fff;
+}
+
+.footer-icons a {
+  color: #00eaff;
+  margin: 0 15px;
+  font-size: 1.6rem;
+  transition: 0.3s ease-in-out;
+}
+
+.footer-icons a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #00eaff, 0 0 20px #00eaff;
+}
+
+.footer-container p {
+  font-size: 0.9rem;
+  color: #ccc;
+  margin-top: 10px;
+}
