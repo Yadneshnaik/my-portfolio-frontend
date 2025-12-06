@@ -18,7 +18,7 @@ export default function Contact() {
     e.preventDefault();
     setStatus("Sending...");
 
-    const res = await fetch("https://my-portfolio-backend-fn5f.onrender.com/send-mail", {
+    const res = await fetch("https://my-portfolio-backend-fn5f.onrender.com/api/send-mail", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(formData),
