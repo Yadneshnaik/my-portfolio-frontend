@@ -16,20 +16,33 @@ section {
   backdrop-filter: blur(10px);
 }
 
-/* HERO BASE */
 .hero {
   height: 100vh;
-  width: 100%;
-  position: relative;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0 20px;  /* mobile padding */
 }
 
-/* BACKGROUND CIRCLES */
+.glow-text {
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: 0 0 15px #00d9ff;
+}
+
+/* HERO SECTION */
+.hero {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+  background: #0d0d0d;
+}
+
+/* Background Floating Circles */
 .bg-circle {
   position: absolute;
   border-radius: 50%;
@@ -42,128 +55,37 @@ section {
   height: 350px;
   background: rgba(0, 200, 255, 0.5);
   top: -80px;
-  left: -80px;
+  left: -100px;
 }
 
 .circle2 {
   width: 400px;
   height: 400px;
   background: rgba(255, 0, 120, 0.4);
-  bottom: -90px;
-  right: -100px;
+  bottom: -100px;
+  right: -120px;
 }
 
-/* OVERLAY */
+/* RGBA Overlay for Dark Effect */
 .overlay {
   position: absolute;
   inset: 0;
   background: rgba(0, 0, 0, 0.45);
   backdrop-filter: blur(4px);
-  z-index: 1;
 }
 
-/* TEXT */
+/* Glow Text Effect */
 .glow-text {
-  font-size: 3rem;
+  font-size: 3.2rem;
   font-weight: 700;
-  text-shadow: 0 0 20px #00eaff;
+  text-shadow: 0 0 20px #00eaff, 0 0 40px #00eaff;
   z-index: 2;
 }
 
-.hero h3 {
-  z-index: 2;
-  margin-top: 10px;
-  font-size: 1.4rem;
-}
-
+.hero h3,
 .hero a {
   z-index: 2;
-  margin-top: 20px;
 }
-
-/* ---------------------- */
-/*    RESPONSIVE FIXES    */
-/* ---------------------- */
-
-/* TABLET */
-@media (max-width: 992px) {
-  .glow-text {
-    font-size: 2.6rem;
-  }
-
-  .hero h3 {
-    font-size: 1.2rem;
-  }
-
-  .circle1 {
-    width: 280px;
-    height: 280px;
-    top: -50px;
-    left: -50px;
-  }
-
-  .circle2 {
-    width: 300px;
-    height: 300px;
-    bottom: -60px;
-    right: -70px;
-  }
-}
-
-/* MOBILE LANDSCAPE + SMALL TABLETS */
-@media (max-width: 768px) {
-  .glow-text {
-    font-size: 2.2rem;
-  }
-
-  .hero h3 {
-    font-size: 1rem;
-  }
-
-  .circle1 {
-    width: 220px;
-    height: 220px;
-  }
-
-  .circle2 {
-    width: 240px;
-    height: 240px;
-  }
-}
-
-/* MOBILE PHONES */
-@media (max-width: 480px) {
-  .glow-text {
-    font-size: 1.8rem;
-  }
-
-  .hero h3 {
-    font-size: 0.95rem;
-  }
-
-  .circle1,
-  .circle2 {
-    opacity: 0.4; /* softer background for mobile */
-  }
-
-  .hero a {
-    margin-top: 15px;
-    padding: 10px 30px;
-    font-size: 0.9rem;
-  }
-}
-
-/* VERY SMALL DEVICES */
-@media (max-width: 360px) {
-  .glow-text {
-    font-size: 1.6rem;
-  }
-
-  .hero h3 {
-    font-size: 0.85rem;
-  }
-}
-
 
 form input,
 form textarea {
