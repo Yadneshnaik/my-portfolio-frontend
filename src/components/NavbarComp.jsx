@@ -17,7 +17,7 @@ export default function NavbarComp() {
 
       <div className="collapse navbar-collapse" id="nav">
         <ul className="navbar-nav ms-auto">
-          {["home", "about", "skills", "projects", "contact"].map((item) => (
+          {["home", "about", "skills", "projects", "experience", "contact"].map((item) => (
             <li className="nav-item mx-2" key={item}>
               <Link
                 className="nav-link"
