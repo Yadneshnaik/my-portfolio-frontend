@@ -1,40 +1,47 @@
 import React from "react";
-import "./Experience.css";
+import { motion } from "framer-motion";
 import { experienceData } from "../data/experienceData";
 
 export default function Experience() {
   return (
-    <section className="experience-section" id="experience">
-      <div className="container">
-        <h2 className="section-title">Work Experience</h2>
+    <section id="experience" className="container text-center mt-5">
+      <h2 className="text-white">Work Experience</h2>
 
-        <div className="timeline">
+      <div className="row mt-4">
 
-          {experienceData.map((job, index) => (
-            <div className="timeline-card" key={index}>
+        {experienceData.map((job, i) => (
+          <motion.div
+            className="col-md-6 p-3"
+            key={i}
+            initial={{ opacity: 0, y: 40 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6 }}
+          >
+            <div className="card bg-dark text-white shadow p-3 rounded-4">
 
-              <span className="badge">{job.role}</span>
+              <span className="badge bg-success w-25 mx-auto">
+                {job.role}
+              </span>
 
-              <h3>{job.role}</h3>
+              <h4 className="mt-3">{job.role}</h4>
 
-              <h4 className="company-name">{job.company}</h4>
+              <h5 className="text-info">{job.company}</h5>
 
-              <p className="duration">
+              <p className="text-muted">
                 {job.startDate} — {job.endDate}
               </p>
 
-              <ul className="highlights">
-                {job.highlights.map((point, i) => (
-                  <li key={i}>{point}</li>
+              <ul className="text-start mx-auto" style={{ maxWidth: "80%" }}>
+                {job.highlights.map((h, index) => (
+                  <li key={index}>{h}</li>
                 ))}
               </ul>
 
-              <p className="status">{job.status}</p>
-
+              <p className="text-success fw-bold">{job.status}</p>
             </div>
-          ))}
+          </motion.div>
+        ))}
 
-        </div>
       </div>
     </section>
   );
