@@ -27,7 +27,7 @@ export default function Experience() {
 
               <h5 className="text-info">{job.company}</h5>
 
-              <p className="text-muted">
+              <p className="text fw-bold">
                 {job.startDate} — {job.endDate}
               </p>
 
