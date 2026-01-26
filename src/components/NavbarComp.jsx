@@ -5,7 +5,7 @@ import { useState } from "react";
 export default function NavbarComp() {
   const [expanded, setExpanded] = useState(false);
 
-  const navItems = ["home", "about", "skills", "projects", "experience", "contact"];
+  const navItems = ["home", "about", "skills", "projects", "experience"];
 
   return (
     <motion.nav
