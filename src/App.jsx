@@ -3,10 +3,10 @@ import Hero from "./sections/Hero";
 import About from "./sections/About";
 import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
-import Footer from "./components/Footer";
 import Experience from "./sections/Experience";
+import Footer from "./components/Footer";
 
-function App() {
+export default function App() {
   return (
     <>
       <NavbarComp />
@@ -19,5 +19,3 @@ function App() {
     </>
   );
 }
-
-export default App;

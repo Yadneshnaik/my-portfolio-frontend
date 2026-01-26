@@ -1,4 +1,6 @@
 import { motion } from "framer-motion";
+import { Canvas } from "@react-three/fiber";
+import Laptop from "../three/Laptop";
 
 export default function Projects() {
   const myProjects = [
