@@ -5,6 +5,7 @@ import Skills from "./sections/Skills";
 import Projects from "./sections/Projects";
 import Footer from "./components/Footer";
 import Experience from "./sections/Experience";
+import Contact from "./sections/Contact";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
       <Skills />
       <Projects />
       <Experience />
+      <Contact />
       <Footer />
     </>
   );

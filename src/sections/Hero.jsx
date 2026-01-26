@@ -2,50 +2,61 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <section id="home" className="hero position-relative">
-
-      {/* Background Design Elements */}
+    <section
+      id="home"
+      className="hero-section d-flex align-items-center position-relative"
+    >
+      {/* Background Motion Elements */}
       <motion.div
         className="bg-circle circle1"
         animate={{ x: [0, 40, -40, 0], y: [0, -40, 40, 0] }}
-        transition={{ repeat: Infinity, duration: 12 }}
+        transition={{ repeat: Infinity, duration: 14, ease: "easeInOut" }}
       />
 
       <motion.div
         className="bg-circle circle2"
         animate={{ x: [0, -50, 50, 0], y: [0, 50, -50, 0] }}
-        transition={{ repeat: Infinity, duration: 10 }}
+        transition={{ repeat: Infinity, duration: 16, ease: "easeInOut" }}
       />
 
-      {/* RGBA Overlay */}
-      <div className="overlay"></div>
+      {/* Dark Overlay */}
+      <div className="hero-overlay"></div>
 
-      {/* Hero Content */}
-      <motion.h1
-        className="glow-text"
-        initial={{ opacity: 0, y: -30 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 1 }}
-      >
-        Hi, I'm Yadnesh 👋
-      </motion.h1>
+      {/* Content */}
+      <div className="container position-relative">
+        <div className="row justify-content-center text-center">
+          <div className="col-lg-8">
+            <motion.h1
+              className="hero-title fw-bold mb-3"
+              initial={{ opacity: 0, y: -30 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+            >
+              Hi, I’m <span className="text-info">Yadnesh</span>
+            </motion.h1>
 
-      <motion.h3
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        transition={{ duration: 1.2 }}
-      >
-        Software Developer • Full Stack Developer
-      </motion.h3>
+            <motion.h5
+              className="hero-subtitle text-muted mb-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.2 }}
+            >
+              Software Developer • Full Stack Developer
+            </motion.h5>
 
-      <motion.a
-        href="#projects"
-        className="btn btn-outline-info mt-4"
-        whileHover={{ scale: 1.1 }}
-        whileTap={{ scale: 0.9 }}
-      >
-        View My Work
-      </motion.a>
+            <motion.p
+              className="hero-desc mb-4"
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              transition={{ duration: 1, delay: 0.4 }}
+            >
+              I build scalable, high-performance web applications using modern
+              technologies with a focus on clean design and efficient code.
+            </motion.p>
+
+          </div>
+        </div>
+      </div>
     </section>
   );
 }

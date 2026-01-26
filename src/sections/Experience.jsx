@@ -4,44 +4,50 @@ import { experienceData } from "../data/experienceData";
 
 export default function Experience() {
   return (
-    <section id="experience" className="container text-center mt-5">
-      <h2 className="text-white">Work Experience</h2>
+    <section id="experience" className="container py-5">
+      <h2 className="text-center fw-bold mb-3 text-white">
+        Work Experience
+      </h2>
+      <p className="text-center text-muted mb-5">
+        My professional journey and hands-on industry experience
+      </p>
 
-      <div className="row mt-4">
-
+      <div className="row g-4 justify-content-center">
         {experienceData.map((job, i) => (
           <motion.div
-            className="col-md-6 p-3"
+            className="col-lg-6 col-md-12"
             key={i}
             initial={{ opacity: 0, y: 40 }}
             whileInView={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6 }}
+            transition={{ duration: 0.6, delay: i * 0.1 }}
+            viewport={{ once: true }}
           >
-            <div className="card bg-dark text-white shadow p-3 rounded-4">
+            <div className="card experience-card h-100">
+              <div className="card-body p-4">
+                {/* Role & Status */}
+                <div className="d-flex justify-content-between align-items-center mb-2">
+                  <h5 className="fw-semibold mb-0">{job.role}</h5>
+                  <span className="badge bg-success">{job.status}</span>
+                </div>
 
-              <span className="badge bg-success w-25 mx-auto">
-                {job.role}
-              </span>
+                {/* Company */}
+                <h6 className="text-info mb-1">{job.company}</h6>
 
-              <h4 className="mt-3">{job.role}</h4>
+                {/* Duration */}
+                <p className="text-muted small mb-3">
+                  {job.startDate} — {job.endDate}
+                </p>
 
-              <h5 className="text-info">{job.company}</h5>
-
-              <p className="text fw-bold">
-                {job.startDate} — {job.endDate}
-              </p>
-
-              <ul className="text-start mx-auto" style={{ maxWidth: "80%" }}>
-                {job.highlights.map((h, index) => (
-                  <li key={index}>{h}</li>
-                ))}
-              </ul>
-
-              <p className="text-success fw-bold">{job.status}</p>
+                {/* Highlights */}
+                <ul className="experience-list ps-3">
+                  {job.highlights.map((h, index) => (
+                    <li key={index}>{h}</li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </motion.div>
         ))}
-
       </div>
     </section>
   );
