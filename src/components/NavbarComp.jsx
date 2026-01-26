@@ -14,7 +14,7 @@ export default function NavbarComp() {
     >
       <div className="container">
         <span className="navbar-brand fw-bold">
-          Yadnesh<span className="text-info">.</span>dev
+          Yadneshnaik<span className="text-info">.</span>in
         </span>
 
         <button
